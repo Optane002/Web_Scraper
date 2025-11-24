@@ -1,4 +1,4 @@
-from scrapers import buyabans
+from scrapers import buyabans, laptoplk, singersl
 
 SUPPORTED_SITES = {
     "Sri Lanka": {
@@ -17,5 +17,27 @@ SUPPORTED_SITES = {
                 "max_price": 99999999
             }
         },
+        "Laptop.lk (All Products)": {
+            "scraper": laptoplk.scrape_laptop_lk,
+            "config": {
+                "base_url": "https://www.laptop.lk/index.php/shop/",
+                "output_filename": "Laptop_lk_All_Products.xlsx",
+                "country": "Sri Lanka",
+                "year": 2025,
+                "min_price": 1000,
+                "max_price": 99999999
+            }
+        },
+        "Singer.lk (All Products)": {
+            "scraper": singersl.scrape_singer_sl,
+            "config": {
+                "base_url": "https://www.singersl.com/products",
+                "output_filename": "SingerSL_All_Products.xlsx",
+                "country": "Sri Lanka",
+                "year": 2025,
+                "min_price": 1000,
+                "max_price": 99999999
+            }
+        }
     }
 }
