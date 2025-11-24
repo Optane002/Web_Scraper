@@ -2,13 +2,43 @@
 
 A modular, command-line utility designed for fast, resilient scraping of product data from e-commerce websites in supported regions, currently focused on Sri Lanka.
 
+📊 Status & Metadata
+
+Status
+
+Details
+
+Version
+
+(e.g., v1.0.0)
+
+License
+
+
+
+Language
+
+Python 3.8+
+
+🧭 Table of Contents
+
 ✨ Features & Resilience
 
-Modular Architecture: Easily extensible by adding new site-specific scraper modules.
+🚀 Getting Started
 
-Initial Coverage: Supports scraping all major categories from BuyAbans.com.
+⚙️ Project Structure & Extensibility
 
-Resilience: Implements automatic request retries (handling 504 Gateway Timeouts) and polite scraping delays.
+📝 License
+
+✨ Features & Resilience
+
+The tool is built for stability and easy contribution:
+
+Modular Architecture: The core logic is cleanly separated from site-specific code, making it simple to extend the tool.
+
+Initial Coverage: Supports scraping all major product categories from BuyAbans.com.
+
+Resilience: Implements automatic request retries (handling 504 Gateway Timeouts) and polite scraping delays to prevent IP blocking.
 
 Data Integrity: Robust brand extraction logic ensures accurate product attribution, even if the source JSON is messy.
 
@@ -20,17 +50,17 @@ Output: Exports clean, structured data directly to .xlsx (Excel) files.
 
 1. Prerequisites
 
-You need Python 3.8+ installed on your system.
+You must have Python 3.8+ installed on your system.
 
 2. Installation
 
-First, clone the repository to your local machine:
+Clone the repository and move into the project directory:
 
-git clone [https://github.com/Optane002/web_scraper.git](https://github.com/Optane002/web_scraper.git)
-cd web_scraper
+git clone [https://github.com/YourUsername/price-scraper-cli.git](https://github.com/YourUsername/price-scraper-cli.git)
+cd price-scraper-cli
 
 
-Next, install all required Python packages (requests, pandas, openpyxl, urllib3):
+Install all required Python packages (requests, pandas, openpyxl, urllib3):
 
 pip install -r requirements.txt
 
@@ -42,18 +72,18 @@ Execute the main script from the root directory of the project:
 python web_scraper.py
 
 
-The application will run its checks and then present an interactive menu for you to select the country and the target website.
+The application will display a shell-style header, check dependencies, and then prompt you to select the country and target website.
 
 ⚙️ Project Structure & Extensibility
 
 The application is split into clear components, allowing simple contribution:
 
-web_scraper/
+price-scraper-cli/
 ├── config/
 │   └── sites.py        # Maps countries/sites to their scraper functions and configuration settings.
 ├── scrapers/
 │   ├── __init__.py     # Package initializer.
-│   └── mysite.py     # **Contains site-specific scraping logic and helpers.**
+│   └── buyabans.py     # **Contains site-specific scraping logic and helpers.**
 ├── web_scraper.py      # Main CLI entry point, handling headers, checks, and user flow.
 ├── requirements.txt    # Lists all mandatory dependencies.
 └── README.md
@@ -61,15 +91,15 @@ web_scraper/
 
 Contributing: Adding a New Website
 
-The core principle of this project is easy extensibility. To add support for a new website (e.g., mysite.lk):
+The core principle of this project is easy extensibility. To add support for a new website (e.g., nanotek.lk):
 
-Create a Scraper Module:
+Create a Scraper Module (scrapers/nanotek.py):
 
-Create a new file in the scrapers/ directory (e.g., mysite.py).
+Create a new file in the scrapers/ directory (e.g., nanotek.py).
 
-Implement the main scraper function (it must accept a config dictionary and return a list of product dictionaries).
+Implement the main scraping function (it must accept a config dictionary and return a list of product dictionaries).
 
-Integrate:
+Integrate Configuration:
 
 Import your new scraper function into scrapers/__init__.py.
 
