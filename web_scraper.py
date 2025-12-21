@@ -5,7 +5,7 @@ from config.sites import SUPPORTED_SITES
 
 REQUIRED_PACKAGES = ['requests', 'pandas', 'openpyxl', 'urllib3', 'bs4']
 VERSION_FILE = "version.txt"
-REPO_VERSION_URL = "https://raw.githubusercontent.com/Optane002/Web_Scraper/main/version.txt"
+REPO_VERSION_URL = "https://raw.githubusercontent.com/Optane002/Web_Scraper/refs/heads/main/version.txt"
 
 def get_current_version():
     """Reads the current version from the local version file."""
