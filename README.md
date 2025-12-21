@@ -7,8 +7,9 @@ A modular CLI for fast, resilient scraping of product data from e-commerce store
 | Field    | Details           |
 |--------- |------------------|
 | Version  | [![GitHub release (latest by date)](https://img.shields.io/github/v/release/Optane002/Web_Scraper?label=Version&color=blue)](https://github.com/Optane002/Web_Scraper/releases) |
-| License  | MIT               |
-| Language | Python 3.8+       |
+| License  | [![License](https://img.shields.io/github/license/Optane002/Web_Scraper?label=License&color=green)](https://github.com/Optane002/Web_Scraper/blob/main/LICENSE) |
+| Language | [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/) |
+
 
 ## Table of Contents
 
